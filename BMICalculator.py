@@ -17,6 +17,7 @@ height_entry.pack()
 result_label = Label()
 result_label.config(font=("Helvetica", 10, "normal"))
 
+
 def button_clicked():
     if height_entry == int or height_entry == float and weight_entry == int or height_entry == float:
         bmi_value = float(int(weight_entry.get()) / float(height_entry.get()) ** 2)
@@ -36,8 +37,7 @@ def button_clicked():
             print("Please enter valid values")
 
     else:
-       result_label.config(text="Please enter valid numbers")
-
+        result_label.config(text="Please enter valid numbers")
 
 
 my_button = Button(text="Calculate", command=button_clicked)
@@ -45,6 +45,4 @@ my_button.pack()
 
 result_label.pack()
 
-
 window.mainloop()
-
